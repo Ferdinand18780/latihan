@@ -1,0 +1,75 @@
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    
+  }
+  .foto-prof{
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    object-position: middle;
+    border-color: black;
+    border-style: none;
+    
+  }
+  .profile-besar{
+    width: 120px;
+    height: 180px;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .horizontal{
+    width: 100%;
+  }
+  .friend{
+    width:15px;
+    height: 10px;
+    border-color: red;
+    border-style: none;
+    display: inline-block;
+    margin-left: 3px;
+  }
+  .mutual-friend{
+    
+    border-color: blue;
+    border-style: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .profile-friend{
+    width: 100%;
+    border-radius: 100%;
+  }
+
+  .font-friend{
+    font-size: 12px;
+    text-align: middle;
+    margin-left: 0px;
+    color: gray;
+  }
+
+  .button{
+    display: inline;
+  }
+  
+  .add-friend{
+    margin-top: 3px;
+    background-color: rgb(0, 106, 255);
+    color: white;
+    font-size: 10px;
+    border-style: none;
+    margin-left: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 2px;
+  }
+  .name{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+  }

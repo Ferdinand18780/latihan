@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .nyoba{
+      position: fixed;
+      background-color: green;
+      color: white;
+      bottom: 0px;
+      top: 0px;
+      right: 0px;
+      width: 100px;
+      padding-left: 20px;
+    }
+
+    .overlay{
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.8);
+      bottom: 0px;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-box{
+      width: 400px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .judul{
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .container-isi{
+      margin-left: 20px;
+      padding-bottom: 20px;
+    }
+
+  </style>
+  <title>Position-1</title>
+</head>
+<body style="margin-left: 0px;">
+  <div class="nyoba">
+    right side bar
+  </div>
+  
+  <div class="overlay">
+    <div class="modal-box">
+      <div class="container-isi">
+        <p class="judul">
+          <strong>Modal Title</strong> 
+        </p>
+        <p style="margin-top: 0px;">
+          This is a modal
+        </p>
+        <button>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

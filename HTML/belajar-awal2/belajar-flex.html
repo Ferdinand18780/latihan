@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body{
+      margin-bottom: 1000px;
+    }
+    p{
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-family: arial;
+    }
+    .flex{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+    }
+
+    .flex2{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+      justify-content: space-between;
+    }
+
+    .flex3{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+      justify-content: space-between;
+      height:50px;
+      align-items: center;
+      border-color: black;
+      border-style: solid;
+    }
+
+    .flex4{
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      box-shadow: 0 0 5px black;
+      background-color: whitesmoke;
+      width: 280px;
+      margin-bottom: 50px;
+    }
+
+    .text{
+      display: inline-block;
+      margin-left: 10px;
+      font-family: arial;
+      font-size: 15px;
+      margin-bottom:0px;
+      margin-top: 0px;
+      
+      
+    }
+
+    .sub-flex{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .sub-flex-1{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .button{
+      display: inline-block;
+      margin-right: 10px;
+      border-radius: 8px;
+      border-style: none;
+      background-color: rgb(48, 82, 250);
+      color: white;
+      padding-top: 2px;
+      margin-top: 0px;
+    }
+
+    .box-besaar{
+      display: flex;
+      flex-direction: row;
+      background-color: rgb(135, 31, 135);
+      height: 50px;
+      margin-bottom:50px;
+    }
+
+    .Home{
+      margin-left:10px;
+      margin-right: 100px;
+      color: white;
+      font-weight: 500;
+      font-family: arial;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .search-bar{
+      flex:1;
+      margin-top: 10px;
+      margin-bottom:10px;
+      border-radius: 20px;
+      border-style:none;
+      padding-left: 10px;
+      max-width: 800px;
+    }
+
+    .download-button{
+     margin-top:10px;
+     margin-bottom: 10px;
+     background-color: rgb(135, 31, 135);
+     color: white; 
+     border-color: white;
+     border-style: solid;
+     border-width: 1px;
+     margin-left: 100px;
+     margin-right: 10px;
+     font-family: arial;
+    }
+
+    .animal-family{
+      display:flex;
+      flex-direction: column;
+      width: 300px;
+      
+      background-color: whitesmoke;
+    }
+
+    .sub-family{
+      display: flex;
+      flex-direction: row;
+      height: 73px;
+    }
+
+    .sub-family-last{
+      display: flex;
+      flex-direction: row;
+      height: 73px;
+      margin-bottom: 16px;
+    }
+
+
+    .animal-profile{
+      width:56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 1000px;
+      object-position: middle;
+      margin-top: 16px;
+      margin-left: 12px;
+    }
+
+    .deskrpsi{
+      display:inline-block;
+      margin-left: 15px;
+      margin-top: 16px;
+      line-height: 19px;
+      flex: 1;
+    }
+
+    .Nama{
+      font-size: 15px;
+      color: black;
+    }
+
+    .Nama-des{
+      font-size: 10px;
+      color: gray;
+    }
+
+    .jenis{
+      font-size: 15px;
+      color: gray;
+    }
+
+    
+    .follow-button{
+      background-color: rgb(29, 155, 240);
+      color: white;
+      border-style: none;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 16px;
+      padding-right: 16px;
+      border-radius: 9px;
+      font-weight: bold;
+      margin-top: 16px;
+      margin-bottom: 19px;
+      cursor: pointer;
+      margin-right: 20px
+
+    }
+    
+  </style>
+  
+</head>
+<body>
+  <div class="flex">
+    <div style="background-color: lightblue;
+    width: 200px;">
+      200px
+    </div>
+    <div style="background-color: lightpink;
+    width: 75px;">
+      75px
+    </div>
+  </div>
+
+  <div class="flex">
+    <div style="background-color: lightblue;
+    width: 50px;">
+      50px
+    </div>
+    <div style="background-color: lightcyan; flex: 1;">
+      1fr
+    </div>
+    <div style="background-color: lightpink;
+    width: 75px;">
+      75px
+    </div>
+  </div>
+
+  <div class="flex2">
+    <div style="background-color: lightblue;
+    width: 50px;">
+      50px
+    </div>
+    <div style="background-color: lightblue;
+    width: 50px;">
+      50px
+    </div>
+    <div style="background-color: lightblue;
+    width: 50px;">
+      50px
+    </div>
+    <div style="background-color: lightblue;
+    width: 50px;">
+      50px
+    </div>
+  </div>
+
+  <div class="flex3">
+    <div style="background-color: lightblue;
+    width: 50px;">
+      50px
+    </div>
+    <div style="background-color: lightblue;
+    width: 50px;">
+      50px
+    </div>
+    
+  </div>
+  
+  <div class="flex4">
+    <div class="sub-flex">
+      <p class="text">
+        Home
+      </p>
+      <button class="button">
+        14
+      </button>
+    </div>
+    <div class="sub-flex">
+      <p class="text">
+        Notification
+      </p>
+      <button class="button">
+        3
+      </button>
+    </div>
+    <div class="sub-flex-1">
+      <p class="text">
+        Massages
+      </p>
+      <button class="button">
+        5
+      </button>
+    </div>
+  </div>
+
+  <div class="box-besaar">
+    <p class="Home">
+      Home
+    </p>
+    <input class="search-bar" type="text" placeholder="Search">
+    <button class="download-button">
+      Download
+    </button>
+  </div>
+
+  <div class="animal-family">
+    <div class="sub-family">
+      <img class="animal-profile" src="_kucing.webp">
+      <div class="deskrpsi">
+        <p class="Nama">
+          <strong>Oliver</strong>
+        </p>
+        <p class="jenis">
+          Serah
+        </p>
+        <p class="Nama-des">
+          Nyoba ya
+        </p>
+      </div>
+      <button class="follow-button">
+        Follow
+      </button>
+    </div>
+  </div>
+
+  <div class="animal-family">
+    <div class="sub-family">
+      <img class="animal-profile" src="friend.jpeg">
+      <div class="deskrpsi">
+        <p class="Nama">
+          <strong>Oliver</strong>
+        </p>
+        <p class="jenis">
+          Perempuan
+        </p>
+        <p class="Nama-des">
+          Pacar Ferdi
+        </p>
+      </div>
+      <button class="follow-button">
+        Follow
+      </button>
+    </div>
+  </div>
+
+  <div class="animal-family">
+    <div class="sub-family-last">
+      <img class="animal-profile" src="download.jpeg">
+      <div class="deskrpsi">
+        <p class="Nama">
+          <strong>Oliver</strong>
+        </p>
+        <p class="jenis">
+          Anjing 
+        </p>
+        <p class="Nama-des">
+          The hot one
+        </p>
+      </div>
+      <button class="follow-button">
+        Follow
+      </button>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+  <title>BATU-GUNTING-KERTAS</title>
+</head>
+<body>
+  <p>GUNTING BATU KERTAS</p>
+  <button
+  onclick="
+  rock_paper_scisor('rock');
+  ">
+    Rock
+  </button>
+
+  <button
+  onclick="
+  rock_paper_scisor('paper');
+  ">
+    Paper
+  </button>
+  <button
+  onclick="
+  rock_paper_scisor('scissors');
+  ">
+    Scissors
+  </button>
+
+  <button onclick="
+  score.Win=0;
+  score.Lose=0;
+  score.Tie =0;
+  localStorage.removeItem('score')
+  ">
+    Reset Score
+  </button>
+
+  <script>
+    let score= JSON.parse(localStorage.getItem('score')) 
+    || {  
+        Win:0,
+        Lose:0,
+        Tie:0
+      };
+
+    
+    /*
+      if (!score){
+      score={  
+        Win:0,
+        Lose:0,
+        Tie:0
+      }
+    }; */
+    
+
+    function rock_paper_scisor(playermove){
+      let computer2='';
+      let result2='';
+      const ComputerPick2= Math.random();
+      if (ComputerPick2 >=0 && ComputerPick2<=1/3){
+        computer2='rock';
+      }
+      else if (ComputerPick2 >=1/3 && ComputerPick2<=2/3){
+        computer2='paper';
+      }
+      else{
+        computer2='scissors';
+      }
+
+      if (playermove==='rock'){
+        if (computer2==='paper'){
+        result2='You lose';
+        }
+        else if(computer2 === 'scissors'){
+          result2='You win';
+        }
+        else{
+          result2='Tie';
+        }
+      }
+
+      else if (playermove==='paper'){
+        if (computer2==='paper'){
+          result2='Tie';
+        }
+        else if(computer2 === 'scissors'){
+          result2='You lose';
+        }
+        else{
+          result2='You win';
+        }
+      }
+
+      else if (playermove==='scissors'){
+        if (computer2==='paper'){
+          result2='You win';
+        }
+        else if(computer2 === 'scissors'){
+          result2='Tie';
+        }
+        else{
+          result2='You lose';
+        }
+      }
+      if (result2==='You win'){
+        score.Win+=1
+      }
+      else if (result2==='You Lose'){
+        score.Lose+=1
+      }
+      else{
+        score.Tie+=1
+      }
+
+      localStorage.setItem('score', JSON.stringify(score));
+
+      alert(`You picked ${playermove}. Computer picked ${computer2}. ${result2}
+Win= ${score.Win}
+Lose= ${score.Lose}
+Tie= ${score.Tie}`)
+    }
+  </script>
+</body>

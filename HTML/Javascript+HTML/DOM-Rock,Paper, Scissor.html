@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <title>DOM-BATU-GUNTING-KERTAS</title>
+  <link rel="stylesheet" href="DOM-ROCK.CSS">
+</head>
+<body>
+  <p class="judul">GUNTING BATU KERTAS</p>
+  <button class="button"
+  onclick="
+  rock_paper_scisor('rock');
+  ">
+    <img class="display-move" src="rock-emoji.png" alt="batu">
+  </button>
+
+  <button class="button"
+  onclick="
+  rock_paper_scisor('paper');
+  ">
+    <img class="display-move" src="paper-emoji.png" alt="kertas">
+  </button>
+  <button class="button"
+  onclick="
+  rock_paper_scisor('scissors');
+  ">
+    <img class="display-move" src="scissors-emoji.png" alt="gunting">
+  </button>
+
+  <p class="win-lose"></p>
+
+  <p class="player-pick">
+  </p>
+
+  <p class="score-elem"></p>
+
+  <button class="reset-button" onclick="
+  remove()
+  ">
+    Reset Score
+  </button>
+
+  <script src="DOM-ROCK.js"></script>
+</body>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+  <title>DOM</title>
+  <style>
+    p{
+      font-family: arial;
+      font-size: 16px;
+    }
+
+    .para{
+      color: red;
+    }
+
+    .Youtube-button{
+      background-color: black;
+      color:white;
+      border-style: solid;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right:15px;
+      border-radius: 20px;
+      margin-bottom: 35px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .Youtube-button-is-clicked{
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+
+    .calculate-button{
+      background-color:green ;
+      color: white;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left:15px;
+      padding-right:15px;
+      border-style: none;
+      font-family: Arial;
+      font-size: 15px;
+    }
+
+    .number{
+      font-size: 15px;
+      padding: 10px;
+      margin: 2px;
+
+    }
+  </style>
+</head>
+<body>
+  <p>
+    YouTube Subscribe Button
+  </p>
+  <button class="Youtube-button" onclick="
+  subscribe();
+  ">
+    Subscribe
+  </button>
+
+  <p style="margin-bottom: 35px;">
+    Rock Paper Scissors
+  </p>
+
+  <p>
+    Amazon Shipping CALCULATOR
+  </p>
+  <p>
+    Orders under $40 = +$10 shipping.
+  </p>
+  <p>
+    Orders over $40 = FREE shipping.
+  </p>
+
+  
+
+  <input class="number" type="text" placeholder="Cost of order" 
+  onkeydown="handlekeydown(event)">
+  <button class="calculate-button"
+  onclick="
+  calculate()
+  ">Calculate</button>
+  
+  
+
+  <p class="shipping"></p>
+
+  <script>
+    function handlekeydown() {
+
+      if (event.key==='Enter') {
+        calculate();
+      }
+    }
+
+
+
+    function calculate(){
+      const textBoxElement =Number(document.body.querySelector('.number').value)*100;
+      let process= (textBoxElement< 4000 && textBoxElement>=0);
+      if (process ) {
+        document.body.querySelector('.shipping').innerHTML=`$${(1000 +textBoxElement)/100}`;
+      }
+      else if (textBoxElement<0){
+        document.body.querySelector('.shipping').innerHTML='<p class="para">Eror: cost cannot be less than $0';
+      }
+      else{
+        document.body.querySelector('.shipping').innerHTML= `$${textBoxElement/100}`;
+      };
+    }
+
+    /*const object={
+      nama:'Ferdinand'
+    } 
+    object['age']='keren'
+    console.log(object) */
+    
+    
+    
+    function subscribe(){
+      const buttonElem=document.body.querySelector('.Youtube-button');
+      if (buttonElem.innerHTML === 'Subscribe' ){
+        document.body.querySelector('.Youtube-button').innerHTML='Subscribed';
+        buttonElem.classList.add('Youtube-button-is-clicked');
+      }
+      else {
+        document.body.querySelector('.Youtube-button').innerHTML='Subscribe';
+        buttonElem.classList.remove('Youtube-button-is-clicked');
+      }
+    }
+    
+  </script>
+</body>

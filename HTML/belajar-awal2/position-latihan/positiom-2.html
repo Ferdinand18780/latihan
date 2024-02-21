@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+  <title>position-2</title>
+  <style>
+    p{
+      font-family: arial;
+    }
+    .container-for-sidebar{
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      bottom: 0px;
+      top: 0px;
+      left: 0px;
+
+      background-color: aqua;
+      
+    }
+
+    .container-for-prof{
+      
+      width: 75px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      background-color: rgba(32,34,38,255)
+;
+    }
+
+    .profile{
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 25px;
+      margin-top: 4px;
+    }
+
+    .container-for-text{
+      background-color: rgba(44,46,50,255);
+      width: 200px;
+
+    }
+    .info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .in-line{
+      color: white;
+      display: inline-block;
+      margin-bottom: 0px;
+    }
+
+    .hastag{
+      color: rgba(134,134,134,255);
+    }
+
+    .container-for-info{
+      margin-left: 20px;
+    }
+
+    .plus-sign{
+      margin-right: 20px;
+      font-size: 30px;
+      color: rgba(134,134,134,255);
+    }
+
+ 
+  </style>
+</head>
+<body style="margin: 0px;";">
+  <div class="container-for-sidebar">
+    <div class="container-for-prof">
+      <div style="margin-top: 5px;
+      margin-left: 10px;">
+        <img class="profile" src="/belajar-awal2/_kucing.webp">
+        <img class="profile" src="/belajar-awal2/download.jpeg">
+        <img class="profile" src="/belajar-awal2/friend.jpeg">
+      </div>
+    </div>
+    <div class="container-for-text">
+      <div class="container-for-info">
+        <div class="info">
+          <p class="in-line">
+            INFO
+          </p>
+          <p class="in-line">
+            <span class="plus-sign">&#43;</span>
+          </p>
+        </div>
+        <div class="hastag">
+          <p>
+            # new-videos
+          </p>
+          <p>
+            # updates
+          </p>
+          <p>
+            # faq
+          </p>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>

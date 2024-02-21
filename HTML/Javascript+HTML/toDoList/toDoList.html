@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .deletebutton{
+      background-color: darkred;
+      color: white;
+      border-style: none;
+      height: 100%;
+    }
+
+    .name,.date{
+      display: inline-block;
+    }
+
+    .displayContainer{
+      display: grid;
+      grid-template-columns: 200px 150px 100px 100px;
+      align-items: center;
+      column-gap: 10px;
+      margin-bottom: 10px;
+      height: 38px;
+    }
+
+    .input{
+      font-size: 16px;
+      padding: 6px;
+    }
+    .date{
+      font-size: 15px;
+      padding: 6px;
+    }
+    body{
+      font-size: 16px;
+      font-family: arial;
+    }
+    .addButton{
+      background-color: green;
+      color: white;
+      font-size: 15px;
+      padding: 10px 15px;
+      border-style: none;
+    }
+
+    .clearButton{
+      background-color: black;
+      color: white;
+      font-size: 15px;
+      padding: 10px 15px;
+      border-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="displayContainer">
+    <input class ="input" type="text" placeholder="Todo name">
+    <input class="date" type="date">
+    <button class="addButton">Add</button>
+    <button class="clearButton">Clear All</button>
+  </div>
+  <div class="display"></div>
+  
+  <script>
+    const toDoList=JSON.parse(localStorage.getItem('toDoArray'))||[];
+    let addBarValue='';
+    let dateValue='';
+    const dateBar=document.body.querySelector('.date');
+    const addBar= document.body.querySelector('.input');
+    const buttonElem= document.body.querySelector('.addButton');
+    const clearElem=document.body.querySelector('.clearButton');
+    let deleteElem=document.body.querySelectorAll('.deletebutton');
+
+    document.body.querySelector('.display').innerHTML=localStorage.getItem('htmlText')||'';
+
+
+    
+    
+    buttonElem.addEventListener('click', () =>{
+      const activityDate={};
+      addBarValue=addBar.value;
+      dateValue=dateBar.value;
+      activityDate.name=addBarValue;
+      activityDate.date=dateValue;
+      toDoList.push(activityDate);
+      updateDisplay(toDoList);
+    });
+
+    function updateDisplay (toDoList){
+      if (toDoList.length===0){
+        document.body.querySelector('.display').innerHTML=''
+      }  
+      let html='';
+      toDoList.forEach((value,index) => {
+        let displayList=`
+        <div class="displayContainer">
+          <div class="name">${toDoList[index].name}</div>
+          <div class="date">${toDoList[index].date}</div>
+          <button onclick="
+          toDoList.splice(${index},1);
+          updateDisplay(toDoList);
+          " class="deletebutton">Delete</button>
+        </div>
+        `
+        html+=displayList;
+        document.body.querySelector('.display').innerHTML=html
+      });
+      
+      localStorage.setItem('toDoArray',JSON.stringify(toDoList))
+      localStorage.setItem('htmlText', html);
+      deleteElem=document.body.querySelectorAll('.deletebutton');
+    }
+
+    clearElem.addEventListener('click', () =>{
+      document.body.querySelector('.display').innerHTML='';
+      localStorage.removeItem('htmlText');
+      toDoList.splice(0,toDoList.length);
+    });
+
+    
+    
+  </script>
+</body>

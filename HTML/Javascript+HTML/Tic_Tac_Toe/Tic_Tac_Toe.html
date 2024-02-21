@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .displayGrid{
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+    }
+
+    .button{
+      font-size: 100px;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="displayGrid">
+  </div>
+  <script>
+    
+  
+    const myArray=
+    [
+    '1','1','1',
+    '1','1','1',
+    '1','1','1'
+    ];
+
+    make_element(myArray);
+
+    let turn='x';
+
+    const buttons=document.body.querySelectorAll('.button');
+    buttons.forEach((value,index)=>{
+      value.addEventListener('click',(event)=>{
+        document.getElementById(`${index}`).innerText=playGame(turn);
+        turn=playGame(turn);
+      });
+    });
+
+    function playGame (turn){
+      if (turn==='x'){
+        turn='o';
+        return 'o'
+      }
+      else if (turn==='o') {
+        turn='x';
+        return 'x'
+      }
+    }
+
+    function make_element (myArray){
+      let button='';
+      myArray.forEach((value,index) => {
+        button+=`<button id="${index}" class="button"></button>`
+      });
+      document.body.querySelector('.displayGrid').innerHTML=button;
+    };
+
+    
+
+
+    function firstmove (){
+      o_turn=Math.random();
+      x_turn=Math.random();
+      if (o_turn> x_turn){
+        return turn='o'
+      }
+      else{
+        return turn='x'
+      }
+    };
+  </script>
+</body>

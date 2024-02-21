@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+  <title>if-else</title>
+</head>
+<body>
+  <button onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+  <button onclick="
+    updateCartQuantity('+',1)
+  ">Add to Cart</button>
+
+  <button onclick="
+    updateCartQuantity('+',2)
+  ">+2</button>
+
+  <button onclick="
+    updateCartQuantity('+',3)
+  ">+3</button>
+
+  <button onclick="
+    updateCartQuantity('+',4)
+  ">+4</button>
+
+  <button onclick="
+    updateCartQuantity('+',5)
+  ">+5</button>
+
+  <!-- vvv This code was changed. vvv -->
+  <button onclick="
+    updateCartQuantity('-',1)
+    ">Remove from cart</button>
+
+  <button onclick="
+    updateCartQuantity('-',2)
+
+  ">-2</button>
+
+  <button onclick="
+    updateCartQuantity('-',3)
+  ">-3</button>
+  <!-- ^^^ This code was changed. ^^^ -->
+
+  <button onclick="
+    cartQuantity = 0;
+    console.log('Cart was reset.');
+    console.log(`Cart quantity: ${cartQuantity}`);
+  ">Reset Cart</button>
+
+
+  <script>
+    /*const name='ferdinand'
+    const hour=17;
+    (hour>=6 && hour<=12) ? console.log(`Good Morning ${name}`): 
+    (hour>=13 && hour<=17) ? console.log(`Good afternoon ${name}`): console.log(`Good night ${name}`);
+    */
+    /*const age=3;
+    const holiday=0;
+    (age<=6 || age >=65) && holiday===0 ? console.log('Discount'): console.log('No discount'); */
+
+    /*const computer_pick=Math.random();
+    const guest='tail'
+    let result='';
+    (computer_pick>0.5)? result='head': result='tail';
+    (result===guest) ? console.log('You Win'): console.log('You Lose');*/
+
+    let cartQuantity = 0;
+    
+    function updateCartQuantity(operations,howMany){
+      if (operations==='+'){
+        if ((cartQuantity+howMany)<=10){
+          cartQuantity+=howMany;
+          console.log(cartQuantity);
+          return;
+        }
+        else{
+          alert('The cart is full')
+        }
+
+      }
+      else{
+        if ((cartQuantity-howMany)>=0){
+          cartQuantity-=howMany;
+          console.log(cartQuantity);
+          return;
+        }
+        else{
+          alert('The cart is empty you can not remove an item');
+        }
+      }
+    }
+
+  
+  </script>
+
+</body>

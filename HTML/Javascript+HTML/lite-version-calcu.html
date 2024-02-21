@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+	<title>CALCULATOR</title>
+</head>
+<body>
+	<p>
+		<strong>LITE VESION OF CALCULATOR</strong> 
+	</p>
+	<p>
+		<button
+		onclick="
+		updateCalculation('1');
+		"
+		>1</button>
+		<button onclick="
+		updateCalculation('2');" >2</button>
+		<button
+		onclick="
+		updateCalculation('3');">3</button>
+		<button
+		onclick="
+		updateCalculation('+');">+</button>
+	</p>
+
+	<p>
+		<button
+		onclick="
+		updateCalculation('4')">4</button>
+		<button
+		onclick="
+		updateCalculation('5')">5</button>
+		<button
+		onclick="
+		updateCalculation('6')">6</button>
+		<button
+		onclick="
+		updateCalculation('-')">-</button>
+	</p>
+
+	<p>
+		<button
+		onclick="
+		updateCalculation('7')">7</button>
+		<button
+		onclick="
+		updateCalculation('8')">8</button>
+		<button
+		onclick="
+		updateCalculation('9')">9</button>
+		<button
+		onclick="
+		updateCalculation(' * ')">*</button>
+	</p>
+
+	<p>
+		<button
+		onclick="
+		updateCalculation('0')">0</button>
+		<button
+		onclick="
+		updateCalculation('.')">.</button>
+		<button
+		onclick="
+		number=eval(number)
+		console.log(eval(number))
+		"
+		>=</button>
+		<button onclick="
+		updateCalculation('/')">/</button>
+	</p>
+
+	<p>
+		<button
+		onclick="
+		console.log('Cleared')
+		number=''
+		localStorage.removeItem('number-in-local') ">Clear</button>
+	</p>
+	<script>
+		let number= localStorage.getItem('number-in-local') || ''
+		function updateCalculation(numberClicked){
+			number=number+numberClicked;
+			console.log(number);
+			localStorage.setItem('number-in-local', number);
+			return number;
+		}
+
+	</script>
+  
+</body>

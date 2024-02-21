@@ -1,0 +1,63 @@
+p{
+    font-family: arial;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    text-align: center;
+  }
+  .new{
+    color: orange;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .mac{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .super{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .button{
+    background-color: blue;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 8px;
+    color: white;
+    margin-left: 295px;
+    border: none;
+    margin-bottom: 200px;
+  }
+  
+  .button:hover{
+    cursor: pointer;
+    opacity: 0.2;
+  }
+
+  .harga{
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  .usd{
+    color: gray;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .green{
+    color: rgb(13, 133, 13);
+  }
+
+  .gray{
+    color: gray;
+  }
+
+  .red{
+    color: red;
+  }

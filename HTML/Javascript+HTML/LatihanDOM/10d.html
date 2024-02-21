@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <title>NyobaHTML&js</title>
+    <style>
+      .button,.button1,.button2{
+        background-color: whitesmoke;
+        padding: 20px;
+        border-style: none;
+        cursor: pointer;
+      }
+
+      .is-togle{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="checkIsTogle('.button')">Gaming</button>
+    <button class="button1" onclick="checkIsTogle('.button1')">Music</button>
+    <button class="button2" onclick="checkIsTogle('.button2')">Tech</button>
+  <script >
+    function checkIsTogle(whatButton){
+      const buttonElem= document.body.querySelector('.button');
+      const button1Elem= document.body.querySelector('.button1');
+      const button2Elem= document.body.querySelector('.button2');
+
+      if (whatButton==='.button'){
+        if(!button1Elem.classList.contains('is-togle') && !button2Elem.classList.contains('is-togle'))
+          isTogle(whatButton);
+        else{
+          alert('Matikan salah sayu terlebih dahulu')
+        }
+      }
+
+      else if (whatButton === '.button1'){
+        if(!buttonElem.classList.contains('is-togle') && !button2Elem.classList.contains('is-togle'))
+          isTogle(whatButton);
+        else{
+          alert('Matikan salah sayu terlebih dahulu')
+        }
+      }
+
+      else if (whatButton==='.button2'){
+        if(!button1Elem.classList.contains('is-togle') && !buttonElem.classList.contains('is-togle'))
+          isTogle(whatButton);
+        else{
+          alert('Matikan salah sayu terlebih dahulu')
+        }
+      }  
+    }
+
+
+    function isTogle(whatButton){
+      const buttonElem= document.body.querySelector(whatButton);
+      if (buttonElem.classList.contains('is-togle')){
+        buttonElem.classList.remove('is-togle')
+      }
+      else{
+        buttonElem.classList.add('is-togle')
+      }
+
+    }
+  </script>
+</body>

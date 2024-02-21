@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+  <script>
+    const myArray=[1,-3,5];
+    min= myArray[0];
+    max= min;
+    for (let i=0; i<myArray.length;)  {
+      if (min> myArray[i]){
+        min=myArray[i];
+      };
+      if(max<myArray[i]){
+        max=myArray[i];
+      };
+    }
+    console.log(min);
+    console.log(max);
+
+  </script>
+</body>

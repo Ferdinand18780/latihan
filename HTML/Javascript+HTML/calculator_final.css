@@ -1,0 +1,63 @@
+.number{
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border-style: solid;
+  border-color: rgb(51, 51, 51);
+  font-size: 26px;
+  padding:1px 8px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.numberDot{
+  padding:1px 12px;
+  background-color: rgb(51, 51, 51);
+  font-size: 26px;
+  color: white;
+  border-style: solid;
+  border-color: rgb(51, 51, 51);
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.number_Dot{
+  padding:1px 12px;
+  background-color:rgb(254, 160, 10);
+  color: white;
+  font-size: 26px;
+  color: white;
+  border-style: solid;
+  border-color: rgb(254, 160, 10);
+  color: white;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.number_Dot1{
+  padding:1px 9px;
+  background-color:rgb(254, 160, 10);
+  color: white;
+  font-size: 26px;
+  color: white;
+  border-style: solid;
+  border-color: rgb(254, 160, 10);
+  color: white;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.numberKali{
+  background-color:  rgb(254, 160, 10);
+  color: white;
+  border-style: solid;
+  border-color:  rgb(254, 160, 10);
+  font-size: 26px;
+  padding:1px 11px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.display{
+  color: white;
+  font-size: 26px;
+}

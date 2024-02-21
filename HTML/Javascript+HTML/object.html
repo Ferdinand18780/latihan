@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <title>Object</title>
+</head>
+<body>
+  <button onclick="
+    playCoins('head');">
+    Head
+  </button>
+  <button onclick="
+    playCoins('tail');">
+    Tail
+  </button>
+  <button onclick="
+  score.Win=0
+  score.Lose=0
+  score.Tie=0
+  localStorage.removeItem('score')
+  ">Delete Score</button>
+
+  <script>
+    const score=JSON.parse(localStorage.getItem('score')) || {
+      Win:0,
+      Lose:0,
+      Tie:0
+    }
+
+
+    function playCoins(playerGuess){
+      const computer_pick=Math.random();
+      const guest=playerGuess;
+      let result='';
+      let notif='';
+      (computer_pick>0.5)? result='head': result='tail';
+      (result===guest) ? notif='You Win': notif='You Lose';
+      if (notif==='You Win'){
+        score.Win+=1;
+      }
+      else if (notif===''){
+        score.Tie+=1;
+        notif='Tie';
+      }
+      else{
+        score.Lose+=1;
+      }
+
+      alert(`${notif}
+Win: ${score.Win}, Lose: ${score.Lose}, Tie: ${score.Tie}`)
+
+      localStorage.setItem('score', JSON.stringify(score))
+
+
+    }
+  </script>
+</body>

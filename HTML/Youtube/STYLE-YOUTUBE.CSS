@@ -1,0 +1,80 @@
+p{
+    font-family: roboto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.box-besar-video{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap:15px ;
+    row-gap: 30px;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    vertical-align: top;
+}
+
+.style-video{
+    width:100%;
+    border-radius: 10px;
+}
+
+.desk-vid{
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: 35px 1fr;
+}
+
+
+
+.judul-vid{
+    margin-left: 12px;
+    grid: 1fr;
+}
+
+.foto-profile{
+    width: 100%;
+  
+    border-radius: 17px;
+}
+
+
+.judul-bold{
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    line-height: 25px;
+}
+
+.desk-time{
+    margin-bottom: 5px;
+    color: gray;
+    font-size: 14px;
+}
+
+.container-thumbnail{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.video-time{
+    font-family: Roboto;
+    background-color: black;
+    color: white;
+    width: auto;
+    font-size: 12px;
+    position: absolute;
+    right: 5px;
+    bottom: 9px;
+    border-radius: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+
+
+
